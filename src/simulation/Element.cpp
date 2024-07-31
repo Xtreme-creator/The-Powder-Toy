@@ -12,7 +12,7 @@ Element::Element():
 	Advection(0.0f),
 	AirDrag(-0.0f * CFDS),
 	AirLoss(1.0f),
-	Loss(1.0f),
+	Loss(0.0f),
 	Collision(0.0f),
 	Gravity(0.0f),
 	NewtonianGravity(1.0f),
