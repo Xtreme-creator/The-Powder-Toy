@@ -4,31 +4,31 @@
 static int update(UPDATE_FUNC_ARGS);
 static int graphics(GRAPHICS_FUNC_ARGS);
 
-void Element::Element_DEUT()
+void Element::Element_DEUT+()
 {
 	Identifier = "DEFAULT_PT_DEUT";
-	Name = "DEUT";
+	Name = "DEUT+";
 	Colour = 0x00153F_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 
 	Advection = 0.6f;
-	AirDrag = 0.01f * CFDS;
-	AirLoss = 0.98f;
+	AirDrag = 1.0f * CFDS;
+	AirLoss = 0.0f;
 	Loss = 0.95f;
 	Collision = 0.0f;
-	Gravity = 0.1f;
+	Gravity = 0.0f;
 	Diffusion = 0.00f;
 	HotAir = 0.000f	* CFDS;
-	Falldown = 2;
+	Falldown = 0;
 
 	Flammable = 0;
 	Explosive = 0;
 	Meltable = 0;
-	Hardness = 20;
+	Hardness = 100;
 
-	Weight = 31;
+	Weight = 100;
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 251;
@@ -45,7 +45,7 @@ void Element::Element_DEUT()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	DefaultProperties.life = 10;
+	DefaultProperties.life = 1;
 
 	Update = &update;
 	Graphics = &graphics;
